@@ -29,6 +29,7 @@ group :test do
   gem "factory_bot_rails"
   gem "guard",                    "2.18.0"
   gem "guard-rspec"
+  gem "rspec_junit_formatter"
 end
 
 group :production do

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="rspec" tests="9" skipped="0" failures="0" errors="0" time="0.273494" timestamp="2023-07-14T06:15:57+09:00" hostname="Tomo-MBP14.local">
+<properties>
+<property name="seed" value="8964"/>
+</properties>
+<testcase classname="spec.requests.static_pages_spec" name="StaticPages root 正常にレスポンスを返すこと" file="./spec/requests/static_pages_spec.rb" time="0.194344"></testcase>
+<testcase classname="spec.requests.static_pages_spec" name="StaticPages #home 正常にレスポンスを返すこと" file="./spec/requests/static_pages_spec.rb" time="0.002119"></testcase>
+<testcase classname="spec.requests.static_pages_spec" name="StaticPages #home Home | Ruby on Rails Tutorial Sample Appが含まれること" file="./spec/requests/static_pages_spec.rb" time="0.018817"></testcase>
+<testcase classname="spec.requests.static_pages_spec" name="StaticPages #help 正常にレスポンスを返すこと" file="./spec/requests/static_pages_spec.rb" time="0.014449"></testcase>
+<testcase classname="spec.requests.static_pages_spec" name="StaticPages #help Help | Ruby on Rails Tutorial Sample Appが含まれること" file="./spec/requests/static_pages_spec.rb" time="0.011876"></testcase>
+<testcase classname="spec.requests.static_pages_spec" name="StaticPages #about 正常にレスポンスを返すこと" file="./spec/requests/static_pages_spec.rb" time="0.021502"></testcase>
+<testcase classname="spec.requests.static_pages_spec" name="StaticPages #about About | Ruby on Rails Tutorila Sample Appが含まれること" file="./spec/requests/static_pages_spec.rb" time="0.001906"></testcase>
+<testcase classname="spec.requests.static_pages_spec" name="StaticPages #contact 正常にレスポンスを返すこと" file="./spec/requests/static_pages_spec.rb" time="0.001597"></testcase>
+<testcase classname="spec.requests.static_pages_spec" name="StaticPages #contact Contact | Ruby on Rails Tutorila Sample Appが含まれること" file="./spec/requests/static_pages_spec.rb" time="0.001883"></testcase>
+</testsuite>
