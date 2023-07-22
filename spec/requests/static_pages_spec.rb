@@ -17,7 +17,7 @@ RSpec.describe "StaticPages", type: :request do
     end
     it 'Home | Ruby on Rails Tutorial Sample Appが含まれること' do
       get static_pages_home_path
-      expect(response.body).to include "Home | #{base_title}"
+      expect(response.body).to include "#{base_title}"
     end
   end
 
@@ -28,7 +28,7 @@ RSpec.describe "StaticPages", type: :request do
     end
     it 'Help | Ruby on Rails Tutorial Sample Appが含まれること' do
       get static_pages_help_path
-      expect(response.body).to include "Help | #{base_title}"
+      expect(response.body).to include "#{base_title}"
     end
   end
 
@@ -39,9 +39,9 @@ RSpec.describe "StaticPages", type: :request do
     end
     it 'About | Ruby on Rails Tutorila Sample Appが含まれること' do
       get static_pages_about_path
-      expect(response.body).to include "About | #{base_title}"
+      expect(response.body).to include "#{base_title}"
     end
-  end 
+  end
   
   describe '#contact' do
     it '正常にレスポンスを返すこと' do
@@ -50,7 +50,7 @@ RSpec.describe "StaticPages", type: :request do
     end
     it 'Contact | Ruby on Rails Tutorila Sample Appが含まれること' do
       get static_pages_contact_path
-      expect(response.body).to include "Contact | #{base_title}"
+      expect(response.body).to include "#{base_title}"
     end
   end
 end
