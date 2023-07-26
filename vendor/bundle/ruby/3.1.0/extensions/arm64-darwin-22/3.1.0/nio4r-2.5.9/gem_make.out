@@ -1,0 +1,28 @@
+current directory: /Users/tomohirohino/rails_tutorial7/sample_app/vendor/bundle/ruby/3.1.0/gems/nio4r-2.5.9/ext/nio4r
+/Users/tomohirohino/.rbenv/versions/3.1.3/bin/ruby -I /Users/tomohirohino/.rbenv/versions/3.1.3/lib/ruby/3.1.0 extconf.rb
+checking for unistd.h... yes
+checking for linux/aio_abi.h... no
+checking for linux/io_uring.h... no
+checking for sys/select.h... yes
+checking for port_event_t in poll.h... no
+checking for sys/epoll.h... no
+checking for sys/event.h... yes
+checking for sys/queue.h... yes
+checking for port_event_t in port.h... no
+checking for sys/resource.h... yes
+creating Makefile
+
+current directory: /Users/tomohirohino/rails_tutorial7/sample_app/vendor/bundle/ruby/3.1.0/gems/nio4r-2.5.9/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20230725-34356-3ya9pe sitelibdir\=./.gem.20230725-34356-3ya9pe clean
+
+current directory: /Users/tomohirohino/rails_tutorial7/sample_app/vendor/bundle/ruby/3.1.0/gems/nio4r-2.5.9/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20230725-34356-3ya9pe sitelibdir\=./.gem.20230725-34356-3ya9pe
+compiling bytebuffer.c
+compiling monitor.c
+compiling nio4r_ext.c
+compiling selector.c
+linking shared-object nio4r_ext.bundle
+
+current directory: /Users/tomohirohino/rails_tutorial7/sample_app/vendor/bundle/ruby/3.1.0/gems/nio4r-2.5.9/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20230725-34356-3ya9pe sitelibdir\=./.gem.20230725-34356-3ya9pe install
+/usr/bin/install -c -m 0755 nio4r_ext.bundle ./.gem.20230725-34356-3ya9pe
