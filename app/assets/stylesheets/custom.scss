@@ -1,5 +1,5 @@
 @import "bootstrap-sprockets";
-@import "bootstrap"; 
+@import "bootstrap";
 
 /* mixins, variables, etc. */
 
@@ -26,7 +26,7 @@ textarea {
   }
 }
 
-// typography
+/* typography */
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
@@ -53,33 +53,35 @@ p {
   line-height: 1.7em;
 }
 
-// header
+
+/* header */
 
 #logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #fff;
+  color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
-  &logo:hover {
-    color: #fff;
+  &:hover {
+    color: white;
     text-decoration: none;
   }
 }
 
-// footer
+/* footer */
+
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid #gray-medium-light;
+  border-top: 1px solid $gray-medium-light;
   color: $gray-light;
   a {
-    color: #555;
+    color: $gray;
     &:hover {
-      color: #222;
+      color: $gray-darker;
     }
   }
   small {
@@ -87,10 +89,11 @@ footer {
   }
   ul {
     float: right;
-    list-style-type: none;
+    list-style: none;
     li {
       float: left;
       margin-left: 15px;
     }
   }
 }
+
