@@ -11,7 +11,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params) 
     if @user.save
-      #保存の成功した場合
+      flash[:success] = "Welcome to the Sample App!"
+      redirect_to @user
     else
       render 'new', status: :unprocessable_entity
     end
