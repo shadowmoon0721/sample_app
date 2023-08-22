@@ -45,5 +45,10 @@ RSpec.describe "Users", type: :request do
       user = User.last
       expect(response).to redirect_to user
     end
+
+    it 'ログイン状態であること' do
+      post users_path, params: user_params
+      expect(is_logged_in?).to be_truthy
+    end
   end
 end
