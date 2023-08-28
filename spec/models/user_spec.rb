@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  # pending "add some examples to (or delete) #{__FILE__}"
   let(:user) { User.new(name: 'Example User', email: 'user@example.com', password: 'foobar', password_confirmation: 'foobar') }
 
   it 'userが有効であること' do
@@ -67,4 +66,10 @@ RSpec.describe User, type: :model do
     user.password = user.password_confirmation = "a" * 5
     expect(user).to_not be_valid
   end 
+
+  describe '#authenticated?' do
+    it 'digestがnilならfalseを返すこと' do
+      expect(user.authenticated?('')).to be_falsy 
+    end
+  end
 end
