@@ -4,12 +4,14 @@ FactoryBot.define do
     email { 'michael@example.com' }
     password { 'password' }
     password_confirmation { 'password' }
+    admin { true }
 
     trait :second_user do
       name { 'Sterling Archer' }
       email { 'duchess@example.gov' }
       password { 'password' }
       password_confirmation { 'password' }
+      admin { false }
     end
 
     trait :third_user do
@@ -17,6 +19,7 @@ FactoryBot.define do
       email { 'hands@example.com' }
       password { 'password' }
       password_confirmation { 'password' }
+      admin { false }
     end
 
     trait :fourth_user do
@@ -24,6 +27,7 @@ FactoryBot.define do
       email { 'boss@example.com' }
       password { 'password' }
       password_confirmation { 'password' }
+      admin { false }
     end
 
     trait :continuous_users do
@@ -31,14 +35,8 @@ FactoryBot.define do
       sequence(:email) { |n| "user-#{n}@example.com" }
       password { 'password' }
       password_confirmation { 'password' }
+      admin { false }
     end
   end
-
-  # factory :continuous_users, class: User do
-  #   sequence(:name) { |n| "User #{n}" }
-  #   sequence(:email) { |n| "user-#{n}@example.com" }
-  #   password { 'password' }
-  #   password_confirmation { 'password' }
-  # end
 end
 

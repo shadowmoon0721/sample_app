@@ -222,5 +222,52 @@ RSpec.describe "Users", type: :request do
         expect(response).to redirect_to root_path
       end
     end
+
+    it 'admin属性は更新できないこと' do
+      # userはこの後adminユーザになるので違うユーザにしておく
+      user = FactoryBot.create(:user, :second_user)
+      expect(user).to_not be_admin
+
+      log_in user
+      patch user_path(user), params: { user: { password: 'password',
+                                               password_confirmation: 'password',
+                                               admin: true } }
+      user.reload
+      expect(user).to_not be_admin
+    end
+  end
+
+  
+  describe 'DELETE /users/{id}' do
+    let!(:user) { FactoryBot.create(:user) }
+    let!(:other_user) { FactoryBot.create(:user, :second_user) }
+  
+    context '未ログインの場合' do
+      it '削除できないこと' do
+        expect {
+          delete user_path(user)
+        }.to_not change(User, :count)
+      end
+  
+      it 'ログインページにリダイレクトすること' do
+        delete user_path(user)
+        expect(response).to redirect_to login_path
+      end
+    end
+  
+    context 'adminユーザでない場合' do
+      it '削除できないこと' do
+        log_in other_user
+        expect {
+          delete user_path(user)
+        }.to_not change(User, :count)
+      end
+  
+      it 'rootにリダイレクトすること' do
+        log_in other_user
+        delete user_path(user)
+        expect(response).to redirect_to root_path
+      end
+    end
   end
 end
