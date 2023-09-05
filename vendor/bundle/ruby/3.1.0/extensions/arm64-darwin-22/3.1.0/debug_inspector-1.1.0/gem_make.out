@@ -1,0 +1,15 @@
+current directory: /Users/tomohirohino/rails_tutorial7/sample_app/vendor/bundle/ruby/3.1.0/gems/debug_inspector-1.1.0/ext/debug_inspector
+/Users/tomohirohino/.rbenv/versions/3.1.3/bin/ruby -I /Users/tomohirohino/.rbenv/versions/3.1.3/lib/ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: /Users/tomohirohino/rails_tutorial7/sample_app/vendor/bundle/ruby/3.1.0/gems/debug_inspector-1.1.0/ext/debug_inspector
+make DESTDIR\= sitearchdir\=./.gem.20230905-62230-ye1qjo sitelibdir\=./.gem.20230905-62230-ye1qjo clean
+
+current directory: /Users/tomohirohino/rails_tutorial7/sample_app/vendor/bundle/ruby/3.1.0/gems/debug_inspector-1.1.0/ext/debug_inspector
+make DESTDIR\= sitearchdir\=./.gem.20230905-62230-ye1qjo sitelibdir\=./.gem.20230905-62230-ye1qjo
+compiling debug_inspector.c
+linking shared-object debug_inspector.bundle
+
+current directory: /Users/tomohirohino/rails_tutorial7/sample_app/vendor/bundle/ruby/3.1.0/gems/debug_inspector-1.1.0/ext/debug_inspector
+make DESTDIR\= sitearchdir\=./.gem.20230905-62230-ye1qjo sitelibdir\=./.gem.20230905-62230-ye1qjo install
+/usr/bin/install -c -m 0755 debug_inspector.bundle ./.gem.20230905-62230-ye1qjo
