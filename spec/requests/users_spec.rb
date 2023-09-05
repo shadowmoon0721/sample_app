@@ -12,6 +12,13 @@ RSpec.describe "Users", type: :request do
       expect(response.body).to include full_title('Sign up')
     end
   end
+
+  describe 'GET /users' do
+    it 'ログインユーザでなければログインページにリダイレクトすること' do
+      get users_path
+      expect(response).to redirect_to login_path
+    end
+  end
   
   describe "POST /users #create" do
     it '無効な値だと登録されないこと' do
