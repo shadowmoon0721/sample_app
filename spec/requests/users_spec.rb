@@ -18,6 +18,29 @@ RSpec.describe "Users", type: :request do
       get users_path
       expect(response).to redirect_to login_path
     end
+
+    describe 'pagination' do
+      let(:user) { FactoryBot.create(:user) }
+
+      before do
+        30.times do
+          FactoryBot.create(:user, :continuous_users)
+        end
+        log_in user
+        get users_path
+      end
+      
+      it 'div.paginationが存在すること' do
+        pagination = '<div role="navigation" aria-label="Pagination" class="pagination">'
+        expect(response.body).to include pagination
+      end
+     
+      it 'ユーザごとのリンクが存在すること' do
+        User.paginate(page: 1).each do |user|
+          expect(response.body).to include "<a href=\"#{user_path(user)}\">"
+        end
+      end
+    end
   end
   
   describe "POST /users #create" do
